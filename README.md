@@ -1,3 +1,7 @@
+<!-- /qompassai/cuda/README.md -->
+<!-- ---------------------------- -->
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
+
 <h1 align="center">Compute Unified Device Architcture (CUDA)</h1>
 
 <h2 align="center">Qompass AI on CUDA</h2>
