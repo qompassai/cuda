@@ -6,12 +6,11 @@
 
 <h2 align="center">Qompass AI on CUDA</h2>
 
-<p align="center">
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-cuda)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/cuda/total?style=flat-square)
 
-
+<p align="center">
   <a href="https://developer.nvidia.com/cuda-toolkit">
   <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA">
   </a>
@@ -48,7 +47,6 @@ bash <(curl -L https://raw.githubusercontent.com/qompassai/dotfiles/main/scripts
 # Qompass AI Quick Start Script
 # Copyright (C) 2025 Qompass AI, All rights reserved
 ####################################################
-
 REPO="https://github.com/qompassai/dotfiles"
 TARGET_DIR="$HOME/.dotfiles"
 if [ -d "$TARGET_DIR" ]; then

@@ -1,13 +1,13 @@
 #!/bin/sh
 # /qompassai/cuda/scripts/tests/cctest.sh
-# Qompass AI Cuda Compiler Test Script
+# Qompass AI Cuda Compiler Test
 # Copyright (C) 2025 Qompass AI, All rights reserved
 ####################################################
 OS="$(uname | tr 'A-Z' 'a-z')"
 ARCH="$(uname -m)"
 case "$OS" in
-    msys*|cygwin*|mingw*) IS_WINDOWS=1 ;;
-    *) IS_WINDOWS=0 ;;
+msys* | cygwin* | mingw*) IS_WINDOWS=1 ;;
+*) IS_WINDOWS=0 ;;
 esac
 XDG_BIN="${XDG_DATA_HOME:-$HOME/.local/share}/bin"
 LOCAL_BIN="$HOME/.local/bin"
@@ -24,8 +24,8 @@ check_dir() {
     fi
 }
 if [ "$IS_WINDOWS" -eq 0 ] && [ "$OS" != "android" ]; then
-    check_dir "$XDG_BIN"     "XDG user bin directory"
-    check_dir "$LOCAL_BIN"   "User local bin directory"
+    check_dir "$XDG_BIN" "XDG user bin directory"
+    check_dir "$LOCAL_BIN" "User local bin directory"
 fi
 if [ "$IS_WINDOWS" -eq 1 ]; then
     check_dir "$WIN_LOCAL_BIN" "User Programs bin directory"
@@ -48,10 +48,12 @@ else
 fi
 if command -v sccache >/dev/null 2>&1; then
     case "$IS_WINDOWS" in
-        1) : ;;
-        *) CC="sccache $CC"
-           CXX="sccache $CXX"
-           FC="sccache $FC" ;;
+    1) : ;;
+    *)
+        CC="sccache $CC"
+        CXX="sccache $CXX"
+        FC="sccache $FC"
+        ;;
     esac
 fi
 HOME_DIR="${HOME:-$USERPROFILE}"
